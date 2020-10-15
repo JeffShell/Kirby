@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+    <title>Document</title>
+    <style id="demo2"></style>
+</head>
+
+<body>
+    <div id="demo"></div>
+    <div id="buttons">
+        <button id="btnPause">
+            暂停
+        </button>
+        <button id="btnPlay">
+            播放
+        </button>
+        <button id="btnSlow">
+            慢放
+        </button>
+        <button id="btnNormal">
+            中速
+        </button>
+        <button id="btnFast">
+            快速
+        </button>
+    </div>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        *::before,
+        *::after {
+            content: '';
+            display: block;
+            box-sizing: border-box;
+        }
+
+
+        #demo2 {
+            display: none;
+        }
+
+        #demo {
+            border: 1px solid red;
+            padding: 10px;
+            background-color: #fff;
+            position: fixed;
+            height: 40vh;
+            top: 0;
+            left: 0;
+            width: 100%;
+            overflow-y: auto;
+        }
+
+        #demo::-webkit-scrollbar {
+            display: none
+        }
+
+        #html {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 60vh;
+        }
+
+        #buttons {
+            position: fixed;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            top: 0;
+            right: 0;
+            margin-top: 10px;
+            margin-right: 10px;
+        }
+
+        #buttons button {
+            margin-top: 10px;
+        }
+    </style>
+    <div id="html">
+        <div class="body">
+            <div class="head">
+                <div class="eye left">
+                </div>
+                <div class="eye right">
+                </div>
+                <div class="mouth"></div>
+                <div class="face left"></div>
+                <div class="face right"></div>
+            </div>
+        </div>
+        <div class="hand left"></div>
+        <div class="hand right"></div>
+        <div class="foot left"></div>
+        <div class="foot right"></div>
+        <div class="app"></div>
+    </div>
+    <script src="test.js" type='module'></script>
+</body>
+
+</html>
